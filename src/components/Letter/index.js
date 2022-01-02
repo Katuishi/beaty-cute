@@ -18,8 +18,6 @@ export default function Letter({ word = "" }) {
           }}
         >
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
             className="letter"
           >
             {word}
