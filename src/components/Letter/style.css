@@ -24,12 +24,18 @@
 
 .letter {
   margin: 1rem;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-align: center;
   word-wrap: normal;
   font-family: "Pushster", cursive;
 }
 
+@media (max-width: 700px) {
+ 
+  .letter {
+    font-size: 1.4rem;
+  }
+}
 
   
