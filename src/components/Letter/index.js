@@ -2,20 +2,24 @@ import { motion } from "framer-motion";
 import "./style.css";
 
 export default function Letter({ word = "" }) {
+
   return (
     <>
       <div className="container">
         <motion.section
           className="box"
-          animate={{ y: [500, 0]}}
+          initial={{ scale: 0.5, y: 500 }}
+          animate={{ scale: 1, y: 0 }}
           transition={{
-            ease: "easeOut",
-            duration: 3,
+            ease: "linear",
+            duration: 2.5,
+            damping: 300,
+            stiffness: 1000,
           }}
         >
           <motion.p
-            animate={{ opacity:0 }}
-            transition={{ ease: "linear", duration: 5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             className="letter"
           >
             {word}
